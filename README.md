@@ -12,6 +12,12 @@
 - Starts December 13, 2022 20:00 UTC
 - Ends December 20, 2022 20:00 UTC
 
+## C4udit / Publicly Known Issues
+
+The C4audit output for the contest can be found [here](add link to report) within an hour of contest opening.
+
+*Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards.*
+
 # Caviar
 
 [Caviar](https://goerli.caviar.sh) is a fully on-chain NFT AMM that allows you to trade every NFT in a collection (from floors to superrares). You can also trade fractional amounts of each NFT too.
