@@ -1,3 +1,17 @@
+# Caviar contest details
+
+- Total Prize Pool: \$36,500 USDC
+  - HM awards: \$25,500 USDC
+  - QA report awards: \$3,000 USDC
+  - Gas report awards: \$1,500 USDC
+  - Judge + presort awards: \$6,000
+  - Scout awards: \$500 USDC
+- Join [C4 Discord](https://discord.gg/code4rena) to register
+- Submit findings [using the C4 form](https://code4rena.com/contests/2022-12-caviar-contest/submit)
+- [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
+- Starts December 13, 2022 20:00 UTC
+- Ends December 20, 2022 20:00 UTC
+
 # Caviar
 
 [Caviar](https://goerli.caviar.sh) is a fully on-chain NFT AMM that allows you to trade every NFT in a collection (from floors to superrares). You can also trade fractional amounts of each NFT too.
