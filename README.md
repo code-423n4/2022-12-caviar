@@ -52,3 +52,28 @@ forge test --gas-report
 | FBAYC                 | [0xC1A308D95344716054d4C078831376FC78c4fd72](https://goerli.etherscan.io/address/0xC1A308D95344716054d4C078831376FC78c4fd72) |
 | Pair (Rare FBAYC:ETH) | [0x7033A7A1980e019BA6A2016a14b3CD783e35300a](https://goerli.etherscan.io/address/0x7033A7A1980e019BA6A2016a14b3CD783e35300a) |
 | LP Token (FBAYC:ETH)  | [0x96E6B35Cc73070FCDB42Abe5a39BfD7f16c37cFc](https://goerli.etherscan.io/address/0x96E6B35Cc73070FCDB42Abe5a39BfD7f16c37cFc) |
+
+
+## Scoping Details
+```
+- If you have a public code repo, please share it here:  https://caviar.sh
+- How many contracts are in scope?:   3
+- Total SLoC for these contracts?:  250
+- How many external imports are there?: 5  
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  3
+- Does most of your code generally use composition or inheritance?:   Yes
+- How many external calls?:   5
+- What is the overall line coverage percentage provided by your tests?:  100
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  false
+- Please describe required context:   
+- Does it use an oracle?:  false
+- Does the token conform to the ERC20 standard?:  Yes
+- Are there any novel or unique curve logic or mathematical models?: Nothing novel - using uni v2 style curves
+- Does it use a timelock function?:  Yes
+- Is it an NFT?: No
+- Does it have an AMM?:   Yes
+- Is it a fork of a popular project?:   false
+- Does it use rollups?:   false
+- Is it multi-chain?:  false
+- Does it use a side-chain?: false
+```
