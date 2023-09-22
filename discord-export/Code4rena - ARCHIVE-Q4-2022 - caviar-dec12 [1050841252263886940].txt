@@ -1,0 +1,768 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2022 / caviar-dec12
+==============================================================
+
+[12/09/2022 18:31] kartoonjoy (pinned)
+👋 Hello and welcome to the contest channel for the $36,500 USDC **Caviar** contest!
+
+📆 Contest opens 12/12/2022 20:00 (20:00 UTC) and runs through 12/19/2022 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the Caviar team, particularly @out.eth, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-12-caviar-contest
+
+{Embed}
+https://code4rena.com/contests/2022-12-caviar-contest
+Code4rena Caviar contest
+$36,500 USDC
+12 December 2022—19 December 2022
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+wha (4) 🔥 (3) 
+
+[12/09/2022 19:20] kartoonjoy
+Pinned a message.
+
+
+[12/09/2022 23:22] out.eth
+Hey guys feel free to DM me or post any q's in here. I'm online from 09:00 UTC to 23:00 UTC 😄
+
+{Reactions}
+👀 (3) 
+
+[12/09/2022 23:33] ladboy233
+👆
+
+
+[12/12/2022 20:04] itsmetechjay
+We are noticing a bug on the contest page.  Please go directly to the repo if you are experiencing issues: https://github.com/code-423n4/2022-12-caviar
+
+{Embed}
+https://github.com/code-423n4/2022-12-caviar
+GitHub - code-423n4/2022-12-caviar
+Contribute to code-423n4/2022-12-caviar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/27ad13f2-b2c4-45bc-9065-2678ca4aa443-D88EE
+
+{Reactions}
+👍 (3) 
+
+[12/12/2022 20:21] thepicodes (pinned)
+**Automated findings:** https://gist.github.com/Picodes/42f9144fd8cba738f3a7098411737760
+
+
+[12/12/2022 20:23] itsmetechjay (pinned)
+Wardens, please note that c4udit output has been posted above and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings: **
+https://gist.github.com/Picodes/42f9144fd8cba738f3a7098411737760
+
+This will also be linked in the contest README file shortly.
+
+
+[12/12/2022 20:23] itsmetechjay
+Pinned a message.
+
+
+[12/12/2022 20:25] itsmetechjay
+Pinned a message.
+
+
+[12/13/2022 02:36] ladboy233
+Failing tests:
+Encountered 1 failing test in test/Pair/unit/NftAdd.t.sol:NftAddTest
+[FAIL. Reason: EvmError: Revert] testItAddsWithMerkleProof() (gas: 17683)
+
+Encountered 1 failing test in test/Pair/unit/NftSell.t.sol:NftSellTest
+[FAIL. Reason: EvmError: Revert] testItSellsWithMerkleProof() (gas: 17727)
+
+Encountered 2 failing tests in test/Pair/unit/Wrap.t.sol:WrapTest
+[FAIL. Reason: EvmError: Revert] testItAddsWithMerkleProof() (gas: 17726)
+
+
+[12/13/2022 02:37] ladboy233
+Merkle tree related test is failing, does anyone has the same issue?
+
+
+[12/13/2022 03:02] neophanyxeth
+Yeah, I have it too.
+
+
+[12/13/2022 04:23] birdy0219
+I didn't have any issues, I followed the directions in the README.md Quickstart 1-liner
+
+
+[12/13/2022 05:44] chaduke#3730
+@ladboy233小伙子good luck, I wish I can catch up with you in this project
+
+
+[12/13/2022 07:17] out.eth
+Make sure you run `yarn` and install the required deps before.
+
+```
+yarn
+foundry up
+forge install
+forge test --gas-report
+```
+
+
+[12/13/2022 12:36] ladboy233
+🫡
+
+
+[12/13/2022 12:37] ladboy233
+Yeah ok after I run "yarn" it works fine. The merkle root generation script are javascript dependency.
+
+{Reactions}
+👍 
+
+[12/13/2022 14:56] pwnforce
+I've sent you a DM
+
+{Reactions}
+👍 
+
+[12/13/2022 17:04] chaduke#3730
+any documentation regarding the  buyQuote and sellQuote formulae?
+
+
+[12/13/2022 18:33] adriro
+clear and concise docs 👏
+
+{Reactions}
+❤️ (3) 
+
+[12/13/2022 18:34] atarpara
+@out.eth sent you DM
+
+{Reactions}
+👍 (2) 
+
+[12/13/2022 19:02] out.eth
+Hey there is not but it is pretty much exactly the same as the uniswap v2 implementation. `getAmountOut` and `getAmountIn`: https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L43
+
+https://medium.com/phoenix-finance/understanding-the-xyk-model-of-pooled-liquidity-7340fdc20d9c
+
+
+[12/13/2022 19:22] chaduke#3730
+OK. thanks
+
+
+[12/13/2022 20:45] aviggiano
+the code is very clean indeed
+
+{Reactions}
+❤️ (2) 
+
+[12/13/2022 20:52] chaduke#3730
+true.
+
+
+[12/13/2022 20:53] chaduke#3730
+Any documentation for the proofs for the wrap function? https://github.com/code-423n4/2022-12-caviar/blob/0212f9dc3b6a418803dbfacda0e340e059b8aae2/src/Pair.sol#L217
+
+{Embed}
+https://github.com/code-423n4/2022-12-caviar/blob/0212f9dc3b6a418803dbfacda0e340e059b8aae2/src/Pair.sol
+2022-12-caviar/Pair.sol at 0212f9dc3b6a418803dbfacda0e340e059b8aae2...
+Contribute to code-423n4/2022-12-caviar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/27ad13f2-b2c4-45bc-9065-2678ca4aa443-D88EE
+
+
+[12/13/2022 21:25] out.eth
+No, it's just a standard sorted merkle proof generation using keccak256: https://github.com/code-423n4/2022-12-caviar/blob/0212f9dc3b6a418803dbfacda0e340e059b8aae2/script/helpers/generate-merkle-proof.js#L7
+
+{Embed}
+https://github.com/code-423n4/2022-12-caviar/blob/0212f9dc3b6a418803dbfacda0e340e059b8aae2/script/helpers/generate-merkle-proof.js
+2022-12-caviar/generate-merkle-proof.js at 0212f9dc3b6a418803dbfacd...
+Contribute to code-423n4/2022-12-caviar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/27ad13f2-b2c4-45bc-9065-2678ca4aa443-D88EE
+
+
+[12/13/2022 21:26] ladboy233
+:nice:
+
+
+[12/13/2022 21:29] chaduke#3730
+got it thanks
+
+
+[12/13/2022 23:35] yellowbirby
+@out.eth need to dm, request sent
+
+{Reactions}
+👍 (2) 
+
+[12/14/2022 10:14] .nalus
+I dmed you as well @out.eth
+
+{Reactions}
+👍 (2) 
+
+[12/14/2022 12:47] ladboy233
+https://tenor.com/view/caviar2022-gif-26446471
+
+{Embed}
+https://tenor.com/view/caviar2022-gif-26446471
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/caviar2022-4CE76.png
+
+{Reactions}
+chefskiss (6) 
+
+[12/16/2022 07:10] supernovahs
+dmed @out.eth
+
+{Reactions}
+👍 
+
+[12/16/2022 15:44] 0xdeadbeef0x
+So did I @out.eth
+
+{Reactions}
+👍 
+
+[12/17/2022 09:11] 0xbtk
+@out.eth  Dmed
+
+{Reactions}
+👍 
+
+[12/17/2022 12:39] 0xsmartcontract
+Here I think it's not a security problem as a single uint256[] value is hashed with keccak256, is this a correct idea?
+
+https://gist.github.com/Picodes/42f9144fd8cba738f3a7098411737760#l-1--abiencodepacked-should-not-be-used-with-dynamic-types-when-passing-the-result-to-a-hash-function-such-as-keccak256
+
+{Embed}
+https://gist.github.com/Picodes/42f9144fd8cba738f3a7098411737760
+4naly3er-2022-12-caviar.md
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/gist-og-image-17482.png
+
+
+[12/17/2022 16:46] out.eth
+Yes you are right
+
+{Reactions}
+nice (2) 
+
+[12/18/2022 07:18] codeislight
+there is a small typo in this line
+https://github.com/code-423n4/2022-12-caviar/blob/0212f9dc3b6a418803dbfacda0e340e059b8aae2/src/Pair.sol#L465
+
+{Embed}
+https://github.com/code-423n4/2022-12-caviar/blob/0212f9dc3b6a418803dbfacda0e340e059b8aae2/src/Pair.sol
+2022-12-caviar/Pair.sol at 0212f9dc3b6a418803dbfacda0e340e059b8aae2...
+Contribute to code-423n4/2022-12-caviar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/27ad13f2-b2c4-45bc-9065-2678ca4aa443-D88EE
+
+{Reactions}
+👍 (2) 
+
+[12/18/2022 12:29] CRYP70#8985
+@out.eth sent a dm 😁
+
+{Reactions}
+👍 (2) 
+
+[12/18/2022 12:40] koolexc
+@out.eth DMed
+
+{Reactions}
+👍 (2) 
+
+[12/18/2022 19:19] mahdi9606
+@out.eth Sent a Dm
+
+{Reactions}
+👍 (2) 
+
+[12/18/2022 20:55] koolexc
+@out.eth DMed
+
+{Reactions}
+👍 (2) 
+
+[12/18/2022 23:08] 0xarnie
+@out.eth DMed
+
+{Reactions}
+👍 (2) 
+
+[12/19/2022 02:26] dinddle
+in the scenario described where the Emergency Exit Logic has to be used, can't we just override the `transferFrom` and `safeTransferFrom` functions so that users can't send tokens to the dead address or burn?
+
+
+[12/19/2022 02:26] dinddle
+:think_but_yeah:
+
+
+[12/19/2022 02:42] minh___
+no, because the dead address has no special meaning and is just used to describe a scenario where not enough fractional tokens will get back into the pool for redemption.  The malicious actor might as well buy 0.0..1 tokens and hold them forever on his address
+
+
+[12/19/2022 02:44] dinddle
+ohhhh gotcha
+
+
+[12/19/2022 09:31] Franfran#5067
+nice project 🙂
+
+
+[12/19/2022 12:43] PrasadLak#0622
+Is it ok to submit a gas optimization report without having a generated gas report using foundry ?
+
+
+[12/19/2022 18:35] carlitox477
+Yes
+
+
+[12/19/2022 18:35] carlitox477
+I've done it in the past at least
+
+
+[12/19/2022 18:52] 0kage
+Hi - I submitted an issue few hours back but noticed that I haven't received a email confirmation - has it happened with anyone? Should I resubmit in that case?
+
+
+[12/19/2022 19:56] cloudellie
+Can you check the "Findings" tab on the contest page (https://code4rena.com/contests/2022-12-caviar-contest) and see if you can view your own findings there? Sometimes the emails just end up in spam. 
+
+Note that you'll need to be logged in to view them.
+
+P.S. I see 5 submissions under your username.
+
+
+[12/19/2022 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Caviar** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+chefskiss (21) hi5 (9) 4739_Skeletor (10) C4Keycap (14) ☢️ (9) 🫡 (9) 
+
+[12/30/2022 12:54] Ad3sh#1255
+Hey when you guys making public issues of this contest?
+
+{Reactions}
+👀 (5) 
+
+[01/01/2023 16:33] nullbutc00l
+This time of the year it's tricky a lot of people on vacation. Things take a little longer
+
+
+[01/21/2023 09:33] supernovahs
+👀
+
+{Reactions}
+👀 (8) 
+
+[01/23/2023 20:30] xyzbtchunt
+Any update sir?
+
+{Reactions}
+☝️ (2) 
+
+[01/25/2023 13:16] ahmet5611
+https://github.com/code-423n4/code423n4.com/pull/7071/commits/7c26b465c814c6aef8064bd9ceb6a4a55482ffde
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/7071/commits/7c26b465c814c6aef8064bd9ceb6a4a55482ffde
+Add Caviar results by CloudEllie · Pull Request #7071 · code-423n4/...
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/84729667-C9F7E
+
+{Reactions}
+🫡 (4) 👍 (4) 
+
+[01/25/2023 14:22] ladboy233
+So evenly distributed.
+
+{Reactions}
+💯 
+
+[01/25/2023 16:57] supernovahs
+193,supernova,H-03,3,1,0.14889035743445103,41,0.003605093400349904,6.988137683882133,USDC,6.99
+
+
+[01/25/2023 16:57] supernovahs
+How to read this?
+
+
+[01/25/2023 16:59] supernovahs
+6.99 USDC?
+
+
+[01/25/2023 17:13] matin6517
+Yep
+
+{Reactions}
+😅 (3) 
+
+[01/25/2023 17:19] matin6517
+@supernova congrats bro🍻😅
+
+
+[01/25/2023 17:34] supernovahs
+https://tenor.com/view/start-the-party-lets-go-show-must-go-on-fire-carry-on-gif-22918493
+
+{Embed}
+https://tenor.com/view/start-the-party-lets-go-show-must-go-on-fire-carry-on-gif-22918493
+Code4rena - ARCHIVE-Q4-2022 - caviar-dec12 [1050841252263886940].txt_Files/start-the-party-lets-go-C5992.png
+
+{Reactions}
+🥳 (2) 
+
+[01/25/2023 18:04] sk8erboy#8654
+Is there a way how one can see what happened with their submissions? If they were filtered out, why, and so on?
+
+
+[01/25/2023 18:25] cloudellie
+Yes, we'll open the repo up after judging and mitigations are complete, and you can see the history of judging decisions at that time
+
+
+[01/25/2023 18:25] sk8erboy#8654
+Cool, thanks!
+
+
+[01/25/2023 18:37] itsmetechjay
+:C4Keycap:  💸 🎉 Awards for **Caviar**:
+
+$3,609.31 USDC » @cozzetti 
+$3,442.16 USDC » @Bobface 
+$2,184.49 USDC » @unforgiven 
+$1,577.10 USDC » @ElKu 
+$1,570.11 USDC » @imare 
+$1,222.81 USDC » @0xSmartContract 
+$1,031.36 USDC » @carlitox477 
+$1,028.49 USDC » @koxuan 
+$850.48 USDC » @minhquanym 
+$843.00 USDC » @shung🌞🌈 
+$808.13 USDC » @rvierdiiev 
+$798.22 USDC » @cccz 
+$791.23 USDC » @9svR6w 
+$757.97 USDC » @KingNFT 
+$750.98 USDC » @Roman 
+$750.98 USDC » @gzeon 
+$589.15 USDC » @ladboy233小伙子 
+$557.24 USDC » @Jeiwan 
+$440.86 USDC » @hansfriese 
+$347.68 USDC » @dic0de 
+$330.05 USDC » @obront 
+$317.18 USDC » UNCHAIN (@Tomo | NinjAudit, @mashharuki, @yawn, @keit, @ahayashi, @sho, @Kazuma, @cardene, @marmelo, @mugi, @yosuke, @yama, @kevin_katsu, @junya, @daikai, @mabuk, @mameta, @kyok1st, @0xShin0221, @hamaup, @kii, @yoki)
+$287.42 USDC » @yixxas 
+$283.16 USDC » @Rolezn 
+$270.53 USDC » @CRYP70 
+$234.49 USDC » @8olidity 
+$229.39 USDC » @IllIllI 
+$191.32 USDC » @Tricko 
+$184.33 USDC » @comradeKtg 
+$184.33 USDC » @masa 
+$184.33 USDC » @cryptostellar5 
+$180.83 USDC » @ak1
+$179.23 USDC » @ReyAdmirado 
+$179.23 USDC » @Noam Yakov 
+$179.23 USDC » @c3phas 
+$173.84 USDC » Janio
+$173.84 USDC » BPZ (pa6221, @Bitcoinfever244, @PrasadLak)
+$105.25 USDC » @RaymondFam 
+$93.18 USDC » @hihen 
+$93.18 USDC » @bytehat 
+$90.42 USDC » @!0xcaventa 
+$86.19 USDC » @wait 
+$86.19 USDC » @minhtrng 
+$70.21 USDC » @chaduke 
+$64.99 USDC » @Bnke 
+$64.99 USDC » @JC
+$64.99 USDC » SleepingBugs (@Deivitto, @0xLovesleep)
+$59.72 USDC » @Zarf 
+$57.15 USDC » @aviggiano 
+$57.15 USDC » @immeas 
+$57.15 USDC » @rjs 
+$52.93 USDC » @rajatbeladiya 
+$52.93 USDC » Apocalypto (@cRat1st0s, @lucyoa, @M0ndoHEHE)
+$52.93 USDC » @Franfran 
+$50.16 USDC » @Helios 
+$50.16 USDC » @ahayashi 
+$50.16 USDC » @h0wl 
+$50.16 USDC » @0xGusMcCrae 
+$47.24 USDC » @HE1M 
+$47.24 USDC » @__141345__ 
+$47.24 USDC » @BAHOZ 
+$45.94 USDC » @kiki_dev 
+$45.94 USDC » @0xDave 
+$45.94 USDC » @adriro 
+$40.26 USDC » @nicobevi.eth 
+$40.26 USDC » @mauricio1802 
+$40.26 USDC » @Chom 
+$40.26 USDC » @Junnon 
+$40.26 USDC » @0xxm
+
+
+[01/25/2023 18:37] itsmetechjay
+$14.83 USDC » @0xhacksmithh 
+$14.83 USDC » UdarTeam (@ahmedov, @tourist)
+$14.83 USDC » @0x1f8b 
+$14.83 USDC » @saneryee 
+$14.83 USDC » millersplanet
+$14.83 USDC » oyc_109
+$14.83 USDC » @pavankv 
+$14.83 USDC » @HardlyCodeMan 
+$14.83 USDC » @JrNet 
+$14.83 USDC » @0xab00 
+$14.83 USDC » @gz627 
+$14.83 USDC » @0xAgro 
+$14.83 USDC » @tnevler 
+$14.83 USDC » @ret2basic.eth 
+$14.83 USDC » @Diana 
+$14.83 USDC » @Madalad 
+$14.83 USDC » @cryptonue 
+$14.83 USDC » @lukris02 
+$14.83 USDC » @code-cipher 
+$14.83 USDC » @Breeje 
+$6.99 USDC » @eyexploit 
+$6.99 USDC » @lumoswiz 
+$6.99 USDC » @seyni 
+$6.99 USDC » @Samater 
+$6.99 USDC » @supernova 
+$6.99 USDC » @carrotsmuggler 
+$6.99 USDC » @0x52 
+$6.99 USDC » @izhelyazkov 
+$6.99 USDC » @Koolex 
+$6.99 USDC » @haku 
+$6.99 USDC » @Tointer 
+$6.99 USDC » @fs0c 
+$6.99 USDC » @dipp 
+$6.99 USDC » @Deleted User 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 79 total, 3 unique
+Med risk findings: 43 total, 5 unique
+Gas reports: 31
+QA reports: 25
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations, everyone! 💸 💸 💸
+
+*If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+👍 (2) C4Keycap 
+
+[01/25/2023 18:41] ladboy233
+fine
+
+
+[01/25/2023 18:43] carlitox477
+First 4 figures contest :chefskiss: :chefskiss: :chefskiss:
+
+{Reactions}
+hi5 (14) 🎉 (6) 
+
+[01/25/2023 18:46] .tointer
+Hmm I thought I found some tricky bug here, but I guess I got something wrong. Can't wait for report
+
+
+[01/25/2023 18:47] cloudellie
+Congrats!!
+
+
+[01/25/2023 18:48] carlitox477
+Also happy to be above brilliant security researchers as @Jeiwan and @cccz for the first time, I'm sure it's gonna take some time to repeat something like this 😅😅😅
+
+
+[01/25/2023 18:49] carlitox477
+Thank you  ^ ^
+
+{Reactions}
+hi5 (2) 
+
+[01/25/2023 18:50] chaduke#3730
+@carlitox477congrats@!
+
+{Reactions}
+thankyou 
+
+[01/25/2023 18:57] kiki_dev
+First 2 figure finding! Big picture not much but definitely a confidence boost
+
+{Reactions}
+🎉 (4) 
+
+[01/25/2023 18:59] chaduke#3730
+@kiki_devcool, not too far away from three figures soon
+
+{Reactions}
+thankyou 
+
+[01/25/2023 19:10] kiki_dev
+That’s the goal! I feel like I know way more now than  when I competed in this contest. So hopefully it’ll be sooner than later
+
+
+[01/25/2023 19:33] chaduke#3730
+@kiki_devVery likely
+
+
+[01/25/2023 23:33] mashharuki
+thank you!!
+
+
+[01/27/2023 03:36] 0xackermann
+Hi guys, I am quite new in auditing, I found one gas optimisation issue in this contest, however it is marked as unsatisfactory while judging. Is it possible to make a rejudge or how should I improve?
+
+Issue found in public report: https://code4rena.com/reports/2022-12-caviar#g-04-splitting-require-statements-that-use--saves-gas
+
+My issue: https://github.com/code-423n4/2022-12-caviar-findings/blob/main/data/0xackermann-G.md
+
+Judge comments: https://github.com/code-423n4/2022-12-caviar-findings/issues/324
+
+Appreciate any comments!
+
+
+[01/27/2023 04:51] yongkiws
+you should read the automated findings that have been found by the C4 team. means it will not signify getting a prize. you have to improve your skills .
+
+
+[01/27/2023 05:28] carlitox477
+Mmm, I'm not sure of the grade, but gas and QA reports should pass a minimum grade to get rewards. For gas reports, the bar relays on how much gas you saved compared to others reports. It seems you reported just one gas bug which saved little gas compared to others. I'm sure you are gonna improve if you keep putting time and effort. Trying reading grades A report to learn more about how to write a top notch gas report 😄
+
+
+[01/27/2023 05:31] carlitox477
+Rejudging a contest has never happened as far as I know, and it is expected to never happen. If you achieve 3 mediums or 1 high you can request to become a backstage warden, you will have a time period to argue if you have strong arguments in favour of your findings, and you will be able to access to all findings immediately after finishing the contest
+
+
+[01/27/2023 07:15] 0xackermann
+it is actually exclusive from automated findings
+
+
+[01/27/2023 07:15] 0xackermann
+Thanks mate, will work on it.
+
+
+[01/27/2023 07:15] 0xackermann
+Thanks for the info again
+
+
+[01/30/2023 16:56] koolexc
+https://github.com/code-423n4/2022-12-caviar-findings/issues/241
+I don't understand why this was invalid.  Caviar filters created new pair on the frontend (that were created by their admins). Anyone can create these pairs before Caviar admins do. Thus, when Caviar admins try to create it is gonna revert as the new pair already stored in the map. I believe this is critical for the protocol.
+
+{Embed}
+https://github.com/code-423n4/2022-12-caviar-findings/issues/241
+DoS for creating new pairs (NFT/baseToken) by front-running · Issue...
+Lines of code https://github.com/code-423n4/2022-12-caviar/blob/main/src/Caviar.sol#L28-L43 Vulnerability details Impact A malicious actor can front-run create function in Caviar contract, which re...
+
+
+[01/30/2023 17:16] alextheentreprenerd
+I would second the Judge, ultimately there is no permission nor anything else
+
+
+[01/30/2023 17:16] alextheentreprenerd
+The DOS would be more of an annoyance in setting up a pair in the UI
+
+
+[01/30/2023 17:21] koolexc
+That's the issue. there is no permission. So, I can just front-run any pair creations causing the other transaction (by Caviar) to revert. since the pair address uniqueness composed of NFT and baseToken addresses and merkle root.
+
+
+[01/30/2023 17:23] koolexc
+Caviar admin then has to change the merkle root to be able to use the same pair addresses. but then the attacker can front-run it again ...etc.
+
+
+[01/30/2023 17:24] alextheentreprenerd
+If you front-run me, you simply paid gas to deploy the contract for me
+
+The issue is that it doesn't cause any damage, there are no privileges in being the deployer (afaict)
+
+
+[01/30/2023 17:26] koolexc
+Yes, I deploy the contract for you and I become the owner of this contract. However, the pair address is blocked from being used by another deployer
+
+
+[01/30/2023 17:26] koolexc
+Due to this
+`require(pairs[nft][baseToken][merkleRoot] == address(0), "Pair already exists");`
+
+
+[01/30/2023 17:27] alextheentreprenerd
+Pair has no ownership though, it checks the Caviar.owner()
+
+{Reactions}
+👍🏻 (2) 
+
+[01/30/2023 17:30] koolexc
+Maybe I just didn't understand the protocol thoroughly then
+
+
+[01/31/2023 06:33] .0xdave
+I also asked in #❓questions  channel, can you please help me? The question is this.
+Is it possible to call the `safeTransferFrom` function of an ERC-777 token contract in another smart contract, causing the function in that contract to be executed? I had this while reviewing the `[H-01] REENTRANCY IN BUY FUNCTION FOR ERC777 TOKENS ALLOWS BUYING FUNDS WITH CONSIDERABLE DISCOUNT` of the Caviar report. And below is a simple chatGPT example for understanding.
+
+```js
+pragma solidity ^0.8.0;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/main/contracts/token/ERC777/ERC777.sol";
+
+contract ExampleToken is ERC777 {
+    ExampleContract exampleContract;
+
+    constructor(address _exampleContractAddress) public {
+        exampleContract = ExampleContract(_exampleContractAddress);
+    }
+
+    function safeTransferFrom(address _from, address _to, uint256 _value, bytes memory _data) public {
+        exampleContract.randomFuncion(_to, _value);
+    }
+}
+
+```
+
+
+[01/31/2023 20:17] izhelyazkov
+just dm'd about a missed high issue (judging from payout) on my end
+
+{Reactions}
+checkmark 
+
+[02/01/2023 22:01] cloudellie
+Just sent you a friend request.
+
+
+[02/01/2023 22:12] izhelyazkov
+Accepted
+
+{Reactions}
+hi5 
+
+[02/24/2023 14:53] igingu
+Hello everyone! I was looking into Caviar audit report, and was wondering if there is an alternate solution for https://code4rena.com/reports/2022-12-caviar/#h-02-liquidity-providers-may-lose-funds-when-adding-liquidity. 
+
+Assume I send X token A, and Y token B. The number of shares I would get for providing liquidity would be min(Aq, Bq), which are the two quotes. Now, the minimum number of shares would correspond to me sending X' token A, and Y' token B, where X' = min(Aq, Bq) * <AMOUNT_OF_X_TOKEN_PER_SHARE>, and Y' = min(Aq, Bq) * <AMOUNT_OF_Y_TOKEN_PER_SHARE>. If I understand the vulnerability correctly, this would mean that I am sending X token A and Y token B, when I could have sent X' and Y', with either X' < X or Y' < Y => I am either losing X' - X tokens, or Y' - Y tokens. 
+
+Wouldn't a fix for this be that instead of transfering X and Y tokens to the contract as liquidity, the protocol would only transfer X' and Y' amount of tokens, after calculating the minimum amount of shares? This way, I would get the minimum amount of shares, without losing (X-X') or (Y-Y') tokens.  Am I overseeing anything? Thank you!
+
+{Embed}
+https://code4rena.com/reports/2022-12-caviar/
+Caviar contest
+Hack DeFi. Compete. Get paid.
+
+{Reactions}
+💫 
+
+[02/24/2023 15:21] igingu
+Also, the solution to: https://code4rena.com/reports/2022-12-caviar/#h-03-first-depositor-can-break-minting-of-shares: minting 1000 initial shares to Caviar contract.
+
+If I dilute the shares, assume there comes a user that adds MINIMUM_LIQUIDITY of token A, MINIMUM_LIQUIDITY of tokenB, and receives a number X of shares. Considering the total number of shares is now X + 1000, split between MIN_LIQ Token A and MIN_LIQ Token B, the user removing X number of shares from the liquidity pool would mean they wouldn't get back MINIMUM_LIQUIDITY of token A, and MINIMUM_LIQUIDITY of token B, but a considerably smaller amount. Is that not an issue?
+
+{Embed}
+https://code4rena.com/reports/2022-12-caviar/
+Caviar contest
+Hack DeFi. Compete. Get paid.
+
+
+==============================================================
+Exported 106 message(s)
+==============================================================
